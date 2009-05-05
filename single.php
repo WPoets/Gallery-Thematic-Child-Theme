@@ -41,7 +41,7 @@ $shortenedurl = file_get_contents('http://tinyurl.com/api-create.php?url=' . url
 				  <?php if(get_post_meta($post->ID, 'web-url')){ ?>
 				    <a href="<?php echo get_post_meta($post->ID, 'web-url', $single = true); ?>"><img src="<?php if(get_post_meta($post->ID, 'full-image')){echo get_post_meta($post->ID, 'full-image', $single = true);}else{bloginfo('url'); echo '/wp-content/themes/gallery/images/full-image-default.jpg';} ?>" width="500" height="375" alt="<?php echo get_post_meta($post->ID, 'web-url', $single = true); ?>"></a>
 				  <?php }else{ ?>
-				    <img src="<?php if(get_post_meta($post->ID, 'full-image')){bloginfo('url');echo get_post_meta($post->ID, 'full-image', $single = true);}else{echo '/wp-content/themes/gallery/images/full-image-default.jpg';} ?>" width="500" height="375" alt="<?php echo get_post_meta($post->ID, 'web-url', $single = true); ?>">
+				    <img src="<?php if(get_post_meta($post->ID, 'full-image')){echo get_post_meta($post->ID, 'full-image', $single = true);}else{echo '/wp-content/themes/gallery/images/full-image-default.jpg';} ?>" width="500" height="375" alt="<?php echo get_post_meta($post->ID, 'web-url', $single = true); ?>">
 			      <?php } ?>
 			  </div>
 			</div>

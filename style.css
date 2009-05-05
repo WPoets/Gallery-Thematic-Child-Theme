@@ -1,11 +1,11 @@
 /*
 Theme Name: Gallery, a Thematic child theme
-Theme URI: http://chris-wallace.com
+Theme URI: http://www.chris-wallace.com/2009/05/04/gallery-wordpress-theme/
 Description: The ultimate gallery-style Thematic child theme for WordPress.
 Author: Chris Wallace
 Author URI: http://chris-wallace.com
 Template: thematic
-Version: 1.0
+Version: 1.1
 .
 This work, like WordPress, is released under GNU General Public License, version 2 (GPL).
 http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
@@ -32,8 +32,6 @@ input,select,textarea{
   -webkit-border-radius: 3px;
   border-radius: 3px
 }
-.nav-previous a,
-.nav-next a,
 input[type="submit"],
 input[type="button"],
 button{
@@ -54,16 +52,12 @@ button{
   border-radius: 20px;
   -webkit-border-radius: 20px
 }
-.nav-previous a:hover,
-.nav-next a:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover,
 button:hover{
   background-position: 0 -22px;
   color: #ddd
 }
-.nav-previous a:active,
-.nav-next a:active,
 input[type="submit"]:active,
 input[type="button"]:active,
 button:active{
@@ -168,7 +162,7 @@ h2{
   display: block;
   width: 164px;
   height: 50px;
-  background: url("images/mixcss-logo-small-trans.png") no-repeat left top;
+  background: url("images/logo.png") no-repeat left top;
   text-indent: -9000px;
   margin-bottom: 10px
 }
@@ -192,8 +186,6 @@ h2{
   background: url("images/menu-bg-trans.png") no-repeat top left;
 }
 #access #category-menu ul{
-  width: auto;
-  text-align: right;
   padding: auto
 }
 #access #category-menu li{
@@ -299,6 +291,7 @@ li.blog-description span{
 }
 .msie #content,
 .single #content,
+.home #content,
 .page #content{
   padding-top: 20px
 }
@@ -321,7 +314,7 @@ li.blog-description span{
 }
 .single .artwork-container{
   float: left;
-  margin-left: -940px
+  margin-left: -935px
 }
 .single .entry-artwork{
   background-color: #191919;
@@ -917,6 +910,52 @@ a.more-link .meta-nav {
   border: 3px double #ddd;
   margin: 0 10px 10px 0;
 }
+
+/* IE6 fixes */
+
+.ie6 .single .entry-content{
+  height: 450px
+}
+
+.ie6 .entry-content {
+  height:130px;
+}
+
+.ie6,
+.ie6 #container{
+  width: 100%;
+  overflow: hidden
+}
+.ie6 #blog-title a{
+  overflow: auto
+}
+.ie6 #category-menu,
+.ie6 #category-nav{
+  width: 940px
+}
+.ie6 #category-menu{
+  margin: 10px 0 0 10px
+}
+.ie6 #category-nav li {
+  float: left;
+  display: inline;
+  padding: 0;
+  margin: 0;
+  height: auto
+}
+.ie6 #category-nav li.blog-description{
+  float: right
+}
+.ie6 #category-nav li.blog-description span{
+  float: right
+}
+.ie6 #category-nav a{
+  float: left
+}
+.ie6 .single #content {
+  height: auto
+}
+
 
 /* Styles for Contact Form 7 plugin */
 

@@ -32,5 +32,8 @@ jQuery(window).load(function(){
   })
   
   jQuery('#footer .widgetcontainer:nth-child(3n+1)').addClass('reset');
-  
+  jQuery('.ie6 #footer .widgetcontainer:nth-child(3n+1),.ie7 #footer .widgetcontainer:nth-child(3n+1)').style({
+    clear : 'left'
+  });
+
 });

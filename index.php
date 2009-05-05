@@ -26,8 +26,9 @@ foreach ($options as $value) {
 
 			<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?>">
 				<div class="entry-content">
-				<?php childtheme_post_header() ?>
-	    		<a href="<?php echo the_permalink() ?>"><span class="slide-title"><?php echo the_title(); ?></span><img class="thumbnail" src="<?php if(get_post_meta($post->ID, 'thumbnail')){echo get_post_meta($post->ID, 'thumbnail', $single = true);} else{bloginfo('url'); echo "/wp-content/themes/gallery/images/thumbnail-default.jpg";} ?>" width="125" height="125" alt="<?php echo the_title() ?>" /></a>
+					<?php childtheme_post_header() ?>
+		    		<a href="<?php echo the_permalink() ?>"><span class="slide-title"><?php echo the_title(); ?></span>
+	                <img class="thumbnail" src="<?php if(get_post_meta($post->ID, 'thumbnail', $single = true)){echo get_post_meta($post->ID, 'thumbnail', $single = true);} else{bloginfo('url'); echo "/wp-content/themes/gallery/images/thumbnail-default.jpg";} ?>" width="125" height="125" alt="<?php echo the_title() ?>" /></a>
 				</div>
 			</div><!-- .post -->
 
