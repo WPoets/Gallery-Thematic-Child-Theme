@@ -1,14 +1,15 @@
 <?php
 global $options;
 foreach ($options as $value) {
- if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; }
- else { $$value['id'] = get_settings( $value['id'] ); }
-}
+    if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; }
+    else { $$value['id'] = get_settings( $value['id'] ); }
+    }
 ?>
 <?php get_header() ?>
 	
 	<div id="container">
 		<div id="content">
+        <?php get_sidebar('index-top') ?>
 		<h1 class="page-title"><span><?php echo single_cat_title(); ?></span></h1>
 			<div class="archive-meta"><?php if ( !(''== category_description()) ) : echo apply_filters('archive_meta', category_description()); endif; ?></div>
 
